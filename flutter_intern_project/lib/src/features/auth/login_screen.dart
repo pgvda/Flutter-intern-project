@@ -6,9 +6,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Login Page'),
-      ),
+ 
       body: Center(
         child: Container(
           padding: EdgeInsets.all(16.0),
@@ -46,14 +44,14 @@ class LoginPage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Row(
-                
-                  children: [
-                  Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: BorderRadius.circular(8),
-                  child: Expanded(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(8),
+                      ),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Email',
@@ -61,32 +59,57 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                ),
-                ),
-                    
-                SizedBox(width: 10),
-                  Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: BorderRadius.circular(8),
-                  child: Expanded(
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(8),
+                      ),
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: 'Email',
+                          hintText: 'contact Number',
                           border: InputBorder.none,
                         ),
                       ),
                     ),
-                ),
-                ), 
-                    
-                  ],
-              
-                
-                ),
-              
+                  ),
+                ],
+              ),
               SizedBox(height: 20),
+
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Passowrd',
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Confirm Passowrd',
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
